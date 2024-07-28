@@ -41,16 +41,16 @@ sources:
       - name: PRODUCTPRODUCTPHOTO
       - name: PRODUCTSUBCATEGORY
       - name: PRODUCTVENDOR
-      - name: PURCHASEORDERDETAIL
-      - name: PURCHASEORDERHEADER
-      - name: SALESORDERDETAIL
+      - name: purchaseorderdetail
+      - name: purchaseorderheader
+      - name: salesorderdetail
       - name: salesorderheader
       - name: SALESORDERHEADERSALESREASON
       - name: SALESPERSON
       - name: SALESPERSONQUOTAHISTORY
-      - name: SALESREASON
+      - name: salesreason
       - name: SALESTAXRATE
-      - name: SALESTERRITORY
+      - name: salesterritory
       - name: SALESTERRITORYHISTORY
       - name: SCRAPREASON
       - name: SHIFT
@@ -58,7 +58,7 @@ sources:
       - name: SHOPPINGCARTITEM
       - name: SPECIALOFFER
       - name: SPECIALOFFERPRODUCT
-      - name: STATEPROVINCE
+      - name: stateprovince
       - name: STORE
       - name: TRANSACTIONHISTORY
       - name: TRANSACTIONHISTORYARCHIVE
