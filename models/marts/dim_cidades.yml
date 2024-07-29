@@ -1,11 +1,11 @@
 version: 2
 
 models:
-  - name: fct_vendas
+  - name: dim_cidades
     description: >
-      Tabela com as vendas da empresa.    
+      Tabela com das cidades, baseada na tabela de endereços.    
     columns:
-    - name: pedido_itens
+    - name: PK_ENDERECOID
       description:  chave primária.
       tests:
         - unique

@@ -45,7 +45,7 @@ sources:
       - name: purchaseorderheader
       - name: salesorderdetail
       - name: salesorderheader
-      - name: SALESORDERHEADERSALESREASON
+      - name: salesorderheadersalesreason
       - name: SALESPERSON
       - name: SALESPERSONQUOTAHISTORY
       - name: salesreason

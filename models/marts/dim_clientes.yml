@@ -1,11 +1,11 @@
 version: 2
 
 models:
-  - name: fct_vendas
+  - name: dim_cliente
     description: >
-      Tabela com as vendas da empresa.    
+      Tabela com de clientes com join de cidade, estado e pais.    
     columns:
-    - name: pedido_itens
+    - name: PK_CLIENTEID
       description:  chave primária.
       tests:
         - unique

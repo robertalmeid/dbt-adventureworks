@@ -1,11 +1,11 @@
 version: 2
 
 models:
-  - name: fct_vendas
+  - name: dim_estados
     description: >
-      Tabela com as vendas da empresa.    
+      Tabela com de estados.    
     columns:
-    - name: pedido_itens
+    - name: PK_ESTADOID
       description:  chave primária.
       tests:
         - unique

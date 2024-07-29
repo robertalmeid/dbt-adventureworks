@@ -1,11 +1,11 @@
 version: 2
 
 models:
-  - name: fct_vendas
+  - name: dim_calendario
     description: >
-      Tabela com as vendas da empresa.    
+      Tabela com as datas de vendas em formato data, ano, mes, dia.    
     columns:
-    - name: pedido_itens
+    - name: pk_data
       description:  chave primária.
       tests:
         - unique

@@ -1,11 +1,11 @@
 version: 2
 
 models:
-  - name: fct_vendas
+  - name: dim_cartaotipo
     description: >
-      Tabela com as vendas da empresa.    
+      Tabela com os tipos de cartões utilizados na compras.    
     columns:
-    - name: pedido_itens
+    - name: pk_cartaoid
       description:  chave primária.
       tests:
         - unique

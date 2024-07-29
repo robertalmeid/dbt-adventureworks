@@ -1,11 +1,11 @@
 version: 2
 
 models:
-  - name: fct_vendas
+  - name: dim_paises
     description: >
-      Tabela com as vendas da empresa.    
+      Tabela de paises.    
     columns:
-    - name: pedido_itens
+    - name: PK_PAISID
       description:  chave primária.
       tests:
         - unique
