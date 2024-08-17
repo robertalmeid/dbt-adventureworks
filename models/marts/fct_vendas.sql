@@ -1,15 +1,7 @@
 with
-    dim_pais as (
+    dim_regioes as (
         select *
-        from {{ ref('dim_paises')}}
-    )
-    ,dim_estados as (
-        select *
-        from {{ ref('dim_estados')}}
-    )
-    ,dim_cidades as (
-        select *
-        from {{ ref('dim_cidades')}}
+        from {{ ref('dim_regioes')}}
     )
     ,dim_produtos as (
         select *
@@ -35,9 +27,9 @@ with
     select 
     fatos.pk_vendasdetalheid as pedido_itens
     , fatos.fk_vendasid as pedido
-    , fatos.fk_enderecoid as cidade
-    , dim_cidades.fk_estadoid as estado
-    , dim_estados.fk_paisid as pais
+    , fatos.fk_enderecoid as fk_enderecoid
+    --, dim_regioes.fk_estadoid as estado
+    --, dim_estados.fk_paisid as pais
     , fatos.fk_cartaoid as tipocartao
     , fatos.fk_clienteid as cliente
     , fatos.fk_data as data
@@ -49,9 +41,7 @@ with
     , fatos.vlr_desconto as vlr_desconto
     , fatos.vlr_com_desconto as vlr_com_desconto
     from joined as fatos
-    left join dim_cidades on fatos.fk_enderecoid = dim_cidades.pk_enderecoid
-    left join dim_estados on dim_estados.pk_estadoid = dim_cidades.fk_estadoid
-    left join dim_paises on dim_paises.pk_paisid = dim_estados.fk_paisid
+    left join dim_regioes on fatos.fk_enderecoid = dim_regioes.pk_enderecoid
     left join dim_clientes on fatos.fk_clienteid = dim_clientes.pk_clienteid
 
 
