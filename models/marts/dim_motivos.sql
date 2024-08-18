@@ -1,9 +1,9 @@
 with
     motivo as (
         select 
-        cast(SALESREASONID as string) AS pk_motivo
-        , NAME AS motivo
-        , REASONTYPE AS motivo_tipo
+        cast(salesreasonid as string) as pk_motivo
+        , name as motivo
+        , reasontype as motivo_tipo
         from {{ ref('stg_erp__vendas_motivos') }}
     )
     select *

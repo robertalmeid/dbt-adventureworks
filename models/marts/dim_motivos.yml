@@ -5,7 +5,7 @@ models:
     description: >
       Tabela de motivos.    
     columns:
-    - name: PK_MOTIVO
+    - name: pk_motivo
       description:  chave primária.
       tests:
         - unique

@@ -1,8 +1,8 @@
 with
     cartao as (
         select 
-        CREDITCARDID as pk_cartaoid
-        , CARDTYPE as tipocartao
+        creditcardid as pk_cartaoid
+        , cardtype as tipocartao
         from {{ ref('stg_erp__cartoescredito') }}
     )
     select *

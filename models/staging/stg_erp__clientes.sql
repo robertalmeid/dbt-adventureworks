@@ -1,10 +1,10 @@
 with
     src as (
         select 
-        cast(CUSTOMERID as int) as pk_clienteid
-        , cast(STOREID as int) as storeid
-        , cast(TERRITORYID as int) as territoryid
-        , cast(ACCOUNTNUMBER as string) as accountnumber
+        cast(customerid as int) as pk_clienteid
+        , cast(storeid as int) as storeid
+        , cast(territoryid as int) as territoryid
+        , cast(accountnumber as string) as accountnumber
         from {{ source('erp', 'customer') }}
     )
     select 

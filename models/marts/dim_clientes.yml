@@ -3,9 +3,9 @@ version: 2
 models:
   - name: dim_cliente
     description: >
-      Tabela com de clientes com join de cidade, estado e pais.    
+      Tabela com de clientes.    
     columns:
-    - name: PK_CLIENTEID
+    - name: pk_clienteid
       description:  chave primária.
       tests:
         - unique

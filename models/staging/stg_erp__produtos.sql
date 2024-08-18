@@ -1,10 +1,11 @@
 with
     fonte_produto as (
         select 
-        cast(PRODUCTID AS int) as pk_produto
-        , cast(NAME AS string) as nm_produtos
-        , cast(PRODUCTNUMBER AS string) as cod_produto
+        cast(productid as int) as pk_produtoid
+        , cast(name AS string) as nm_produtos
+        , cast(productnumber as string) as cod_produto
         from {{ source('erp', 'product') }}
+        where productid is not null
     )
     select 
     * from fonte_produto

@@ -1,6 +1,6 @@
 with    
     data_vendas as (
-        select fk_data AS DATA
+        select fk_data as data
         from stg_erp__vendas
     )
     , data_compras as (
@@ -14,8 +14,8 @@ with
         select *
         from data_compras
     )
-    select DISTINCT 
-    DATA AS pk_data
+    select distinct 
+    data AS pk_data
     , cast(YEAR(data) as int) as ano
     , cast(month(data) as int) as mes
     , cast(day(data) as int) as dia

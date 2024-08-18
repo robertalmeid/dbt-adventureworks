@@ -1,11 +1,11 @@
 version: 2
 
 models:
-  - name: dim_cidades
+  - name: dim_regioes
     description: >
-      Tabela com das cidades, baseada na tabela de endereços.    
+      Tabela de regioes contem informcoes de endereco, cidade, estado e pais.    
     columns:
-    - name: PK_ENDERECOID
+    - name: pk_enderecoid
       description:  chave primária.
       tests:
         - unique

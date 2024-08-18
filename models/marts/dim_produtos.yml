@@ -3,10 +3,10 @@ version: 2
 models:
   - name: dim_produtos
     description: >
-      Tabela de produtos.    
+      Tabela de produtos.
     columns:
-    - name: PK_PRODUTO
-      description:  chave primária.
-      tests:
-        - unique
-        - not_null
+      - name: pk_produtoid
+        description: chave primária.
+        tests:
+          - unique
+          - not_null

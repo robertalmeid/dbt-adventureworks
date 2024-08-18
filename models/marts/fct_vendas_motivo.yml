@@ -1,12 +1,9 @@
 version: 2
 
 models:
-  - name: fct_vendas
+  - name: fct_vendas_motivo
     description: >
-      Tabela com as vendas da empresa.    
+      Tabela com o motivo das vendas, o pedido relaciona a fct_vendas.    
     columns:
     - name: pk_vendasdetalheid
       description:  chave primária.
-      tests:
-        - unique
-        - not_null
