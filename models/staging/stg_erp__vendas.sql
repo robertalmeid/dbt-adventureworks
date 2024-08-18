@@ -1,7 +1,7 @@
 with
     src as (
         select 
-        cast(SALESORDERID AS INT) AS pk_vendaid
+        cast(salesorderid AS INT) AS pk_vendaid
         , cast(BILLTOADDRESSID as int) as fk_enderecoid 
         , cast(CREDITCARDID as int) as fk_cartaoid  
         , cast(PURCHASEORDERNUMBER AS string) as fk_comprasid

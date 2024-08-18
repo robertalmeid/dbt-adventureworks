@@ -3,7 +3,12 @@ sources:
     database: FEA24_4
     schema: raw_adventure_works
     tables:
-      - name: address   
+      - name: address
+        columns:
+          - name: addressid
+            tests:
+              - unique
+              - not_null
       - name: countryregion
       - name: creditcard
         columns:
@@ -11,21 +16,47 @@ sources:
             tests:
               - unique
               - not_null
-
       - name: customer
         columns:
           - name: customerid
             tests:
               - unique
               - not_null
-      - name: employee
-      - name: person
-      - name: product     
+      - name: product
+        columns:
+          - name: productid
+            tests:
+              - unique
+              - not_null
       - name: purchaseorderdetail
       - name: purchaseorderheader
+        columns:
+          - name: purchaseorderid
+            tests:
+              - unique
+              - not_null
       - name: salesorderdetail
+        columns:
+          - name: salesorderdetailid
+            tests:
+              - unique
+              - not_null
       - name: salesorderheader
+        columns:
+          - name: salesorderid
+            tests:
+              - unique
+              - not_null
       - name: salesorderheadersalesreason
       - name: salesreason
-      - name: salesterritory
+        columns:
+          - name: salesreasonid
+            tests:
+              - unique
+              - not_null
       - name: stateprovince
+        columns:
+          - name: stateprovinceid
+            tests:
+              - unique
+              - not_null
