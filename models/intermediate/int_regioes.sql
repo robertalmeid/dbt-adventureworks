@@ -1,8 +1,9 @@
 with
     enderecos as (
-        select 
+        select distinct
             pk_enderecoid
             , fk_cidadeid
+            , fk_estadoid
         from {{ ref('stg_erp__enderecos')}}
     )
     ,cidades as (
@@ -26,12 +27,11 @@ with
         from {{ ref('stg_erp__paises')}}
     )
    ,joined as (
-        select 
+        select distinct
             enderecos.pk_enderecoid
             , enderecos.fk_cidadeid
             , cidades.cidade
             , cidades.cidade as nm_cidade
-            , cidades.fk_estadoid
             , estados.pk_estadoid
             , estados.nm_estado
             , estados.fk_paisid
@@ -39,7 +39,7 @@ with
             , paises.nm_pais
         from enderecos
         left join cidades on enderecos.fk_cidadeid = cidades.pk_cidadeid
-        left join estados on cidades.fk_estadoid = estados.pk_estadoid
+        left join estados on estados.pk_estadoid = enderecos.fk_estadoid
         left join paises on estados.fk_paisid = paises.pk_paisid
     )
     select *

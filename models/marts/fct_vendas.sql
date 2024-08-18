@@ -24,7 +24,7 @@ with
         from vendas as fatos
         left join dim_produtos on fatos.fk_produtoid = dim_produtos.pk_produtoid
     )
-    select 
+    select distinct
         fatos.pk_vendasdetalheid
         , fatos.fk_vendasid
         , fatos.fk_enderecoid
