@@ -28,6 +28,7 @@ with
    ,joined as (
         select 
             enderecos.pk_enderecoid
+            , enderecos.fk_cidadeid
             , cidades.cidade
             , cidades.cidade as nm_cidade
             , cidades.fk_estadoid

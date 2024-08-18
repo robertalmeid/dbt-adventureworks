@@ -38,6 +38,8 @@ with
         , fatos.vlr_total as vlr_total
         , fatos.vlr_desconto as vlr_desconto
         , fatos.vlr_com_desconto as vlr_com_desconto
+        , dim_regioes.nm_cidade
+        , dim_regioes.nm_pais
     from joined as fatos
     left join dim_regioes on fatos.fk_enderecoid = dim_regioes.pk_enderecoid
     left join dim_clientes on fatos.fk_clienteid = dim_clientes.pk_clienteid
