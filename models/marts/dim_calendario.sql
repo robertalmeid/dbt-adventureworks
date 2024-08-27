@@ -1,11 +1,11 @@
 with    
     data_vendas as (
         select fk_data as data
-        from stg_erp__vendas
+        from {{ ref('stg_erp__vendas') }}
     )
     , data_compras as (
         select fk_data as data
-        from stg_erp__compras
+        from {{ ref('stg_erp__compras') }}
     )
     ,uni_datas as (
         select * from 
